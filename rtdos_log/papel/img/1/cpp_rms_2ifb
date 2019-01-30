@@ -1,0 +1,7 @@
+parm ../../../top_files/dry_2ifb.prmtop
+
+trajin ../../../run/2ifb/data/full_fit_2ifb.nc
+rms first :7-126@CA
+reference avg_2ifb.pdb [avg]
+rms ref [avg] :7-126@CA RMSD out rmsd_2ifb
+go

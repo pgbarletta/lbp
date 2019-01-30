@@ -1,0 +1,7 @@
+parm ../../../top_files/dry_4xcp.prmtop
+
+trajin ../../../run/4xcp/data/full_fit_4xcp.nc
+rms first :10-144@CA
+reference avg_4xcp.pdb [avg]
+rms ref [avg] :10-144@CA RMSD out rmsd_4xcp
+go
