@@ -1,0 +1,8 @@
+parm ../../../top_files/dry_1ifb.prmtop 
+trajin ../data/full_fit_1ifb.nc
+rms first :7-126@CA
+average crdset MyAvg
+run
+rms ref MyAvg :7-126@CA
+atomicfluct out rmsf_1ifb :7-126@CA
+go

@@ -1,0 +1,108 @@
+
+CPPTRAJ: Trajectory Analysis. V16.14
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 05/03/18 17:22:05
+| Available memory: 3.188 GB
+
+INPUT: Reading input from 'STDIN'
+  [parm ../../../top_files/4xcp.prmtop]
+	Reading '../../../top_files/4xcp.prmtop' as Amber Topology
+  [trajin 1p4xcp.nc]
+	Reading '1p4xcp.nc' as Amber NetCDF
+  [trajin 2p4xcp.nc]
+	Reading '2p4xcp.nc' as Amber NetCDF
+  [trajin 3p4xcp.nc]
+	Reading '3p4xcp.nc' as Amber NetCDF
+  [trajin 4p4xcp.nc]
+	Reading '4p4xcp.nc' as Amber NetCDF
+  [autoimage familiar]
+    AUTOIMAGE: To box center based on center of mass, anchor is first molecule.
+  [strip :WAT]
+    STRIP: Stripping atoms in mask [:WAT]
+  [strip :Na+]
+    STRIP: Stripping atoms in mask [:Na+]
+  [strip :Cl-]
+    STRIP: Stripping atoms in mask [:Cl-]
+  [rmsd first out rmsd_4xcp :1-154@CA RMSD]
+    RMSD: (:1-154@CA), reference is first frame (:1-154@CA).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+  [trajout full_fit_4xcp.nc]
+	Writing 'full_fit_4xcp.nc' as Amber NetCDF
+  [go]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: 4xcp.prmtop, 22707 atoms, 6902 res, box: Trunc. Oct., 6749 mol, 6742 solvent
+
+INPUT TRAJECTORIES (4 total):
+ 0: '1p4xcp.nc' is a NetCDF AMBER trajectory, Parm 4xcp.prmtop (Trunc. Oct. box) (reading 50000 of 50000)
+ 1: '2p4xcp.nc' is a NetCDF AMBER trajectory, Parm 4xcp.prmtop (Trunc. Oct. box) (reading 33591 of 33591)
+ 2: '3p4xcp.nc' is a NetCDF AMBER trajectory, Parm 4xcp.prmtop (Trunc. Oct. box) (reading 16180 of 16180)
+ 3: '4p4xcp.nc' is a NetCDF AMBER trajectory, Parm 4xcp.prmtop (Trunc. Oct. box) (reading 726 of 726)
+  Coordinate processing will occur on 100497 frames.
+
+OUTPUT TRAJECTORIES (1 total):
+  'full_fit_4xcp.nc' (100497 frames) is a NetCDF AMBER trajectory
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM '4xcp.prmtop' (5 actions):
+  0: [autoimage familiar]
+	Anchor molecule is 1
+	The following molecules are fixed to anchor: 2
+	6747 molecules are mobile.
+  1: [strip :WAT]
+	Stripping 20226 atoms.
+	Stripped topology: 2481 atoms, 160 res, box: Trunc. Oct., 7 mol
+  2: [strip :Na+]
+	Stripping 0 atoms.
+Warning: No atoms to strip. Skipping 'strip' for topology '4xcp.prmtop'
+Warning: Setup incomplete for [strip]: Skipping
+  3: [strip :Cl-]
+	Stripping 5 atoms.
+	Stripped topology: 2476 atoms, 155 res, box: Trunc. Oct., 2 mol
+  4: [rmsd first out rmsd_4xcp :1-154@CA RMSD]
+	Target mask: [:1-154@CA](154)
+	Reference mask: [:1-154@CA](154)
+Warning: Coordinates are being rotated and box coordinates are present.
+Warning: Unit cell vectors are NOT rotated; imaging will not be possible
+Warning:  after the RMS-fit is performed.
+----- 1p4xcp.nc (1-50000, 1) -----
+ 0% 10% 20% 30% 40% 
+----- 2p4xcp.nc (1-33591, 1) -----
+50% 60% 70% 80% 
+----- 3p4xcp.nc (1-16180, 1) -----
+90% 
+----- 4p4xcp.nc (1-726, 1) -----
+100% Complete.
+
+Read 100497 frames and processed 100497 frames.
+TIME: Avg. throughput= 117.4041 frames / second.
+
+ACTION OUTPUT:
+
+DATASETS (1 total):
+	RMSD "RMSD" (double, rms), size is 100497
+
+DATAFILES (1 total):
+  rmsd_4xcp (Standard Data File):  RMSD
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 855.9923 s ( 99.99%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0652 s (  0.01%)
+TIME:		Other              : 0.0003 s (  0.00%)
+TIME:	Run Total 856.0578 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 856.1025 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+

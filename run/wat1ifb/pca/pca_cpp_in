@@ -1,0 +1,16 @@
+parm ../../../top_files/dry_wat1ifb.prmtop
+trajin ../data/full_fit_wat1ifb.nc
+rms first :7-126@CA
+average avg_wat1ifb.pdb pdb
+run
+
+# Step two. RMS-Fit to average structure. Calculate covariance matrix.
+reference avg_wat1ifb.pdb [avg]
+rms ref [avg] :7-126@CA RMSD
+matrix mwcovar name mtx_wat1ifb :7-126@CA
+createcrd crd_wat1ifb
+run
+
+# Step three. Diagonalize matrix.
+runanalysis diagmatrix mtx_wat1ifb vecs 354 out modes_wat1ifb
+go

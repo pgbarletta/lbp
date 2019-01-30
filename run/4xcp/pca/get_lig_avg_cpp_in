@@ -1,0 +1,5 @@
+parm ../../../top_files/dry_4xcp.prmtop
+trajin ../data/full_fit_4xcp.nc
+rms first :155
+average lig_avg_4xcp.pdb pdb
+run

@@ -1,0 +1,5 @@
+parm ../../../top_files/dry_2ifb.prmtop
+trajin ../data/full_fit_2ifb.nc
+rms first :132
+average lig_avg_2ifb.pdb pdb
+run
