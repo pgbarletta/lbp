@@ -1,0 +1,20 @@
+source leaprc.gaff
+
+# Load plm 
+plm = loadmol2 hplm.mol2
+
+# Shouldn't be any missing paramaters
+check plm
+
+# This parameter file is empty, since there are no missing parameters 
+loadamberparams hplm.frcmod
+
+# Again, this should be ok 
+check plm
+
+# Save 'em
+saveoff plm plm.lib
+saveamberparm plm dry_plm.prmtop dry_plm.rst7
+savepdb plm dry_plm.pdb
+
+quit

@@ -1,0 +1,15 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+source leaprc.gaff
+
+# Load ligand  parameters
+loadoff PLM.lib
+# Load complex
+plm = loadpdb dry_plm.pdb
+charge plm
+addions2 plm Cl- 0
+addions2 plm Na+ 0
+solvateoct plm TIP3PBOX 15
+saveamberparm plm plm.prmtop plm.rst7
+
+quit

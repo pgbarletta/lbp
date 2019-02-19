@@ -94,4 +94,14 @@ WAT1IFB:
     wrote leap_wat1ifb.in
     tleap -f leap_wat1ifb.in > log_wat1ifb
 
-
+PLM:
+----
+    Baje el .CIF a originales_pdb y lo convertí a .pdb con pymol.
+     
+    pdb4amber -i plm.pdb -o hplm.pdb  --reduce  // elimino todos los archivos salvo hplm.pdb
+    antechamber -i hplm.pdb -fi pdb -o hplm.mol2 -fo mol2 -c bcc
+    parmchk2 -i hplm.mol2 -f mol2 -o hplm.frcmod
+    wrote leap_plm.in
+    tleap -f leap_plm.in > log_plm
+    wrote leap_plm2.in
+    tleap -f leap_plm2.in > log_plm2
