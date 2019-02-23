@@ -1,0 +1,6 @@
+parm ../../../../top_files/dry_4uet.prmtop
+
+trajin ../../data/full_fit_4uet.nc
+reference ../../pca/avg_4uet.pdb [avg]
+rms ref [avg] out rmsd_avg :10-144@CA RMSD
+go

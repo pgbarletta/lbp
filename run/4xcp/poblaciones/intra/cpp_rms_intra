@@ -1,0 +1,6 @@
+parm ../../../../top_files/dry_4xcp.prmtop
+
+trajin ../../data/full_fit_4xcp.nc
+reference ../../pca/avg_4xcp.pdb [avg]
+rms ref [avg] out rmsd_avg :10-144@CA RMSD
+go

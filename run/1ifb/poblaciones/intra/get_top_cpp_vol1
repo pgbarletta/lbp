@@ -1,0 +1,5 @@
+parm ../../../../top_files/dry_1ifb.prmtop
+
+trajin ../vol1_1ifb.nc 13807 13807
+trajout top_vol1_1ifb.pdb
+go

@@ -1,5 +1,6 @@
 parm ../../../../top_files/dry_2w9y.prmtop
 
-trajin ../../data/full_fit_2w9y.nc 43910 43910
-trajout top_2w9y.pdb
+#trajin ../../data/full_fit_2w9y.nc 43910 43910
+trajin ../../data/full_fit_2w9y.nc 148219 148219
+trajout 148219_2w9y.pdb
 go

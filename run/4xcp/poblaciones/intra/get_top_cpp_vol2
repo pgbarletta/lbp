@@ -1,0 +1,5 @@
+parm ../../../../top_files/dry_4xcp.prmtop
+
+trajin ../vol2_4xcp.nc 16539 16539
+trajout top_vol2_4xcp.pdb
+go

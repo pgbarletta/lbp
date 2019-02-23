@@ -1,0 +1,6 @@
+parm ../../../../top_files/dry_1ure.prmtop
+
+trajin ../../data/full_fit_1ure.nc
+reference ../../pca/avg_1ure.pdb [avg]
+rms ref [avg] out rmsd_avg :7-126@CA RMSD
+go

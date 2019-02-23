@@ -1,5 +1,5 @@
-parm ../../../../top_files/dry_4xcp.prmtop
-trajin ../vol2_4xcp.nc
+parm ../../../../../top_files/dry_4xcp.prmtop
+trajin ../../vol2_4xcp.nc
 rms first :10-144@CA
 average vol2_avg_4xcp.pdb pdb
 run
