@@ -1,6 +1,6 @@
 #!/bin/bash
 export CUDA_VISIBLE_DEVICES="0"
-i=74
+i=0
 starting_mdin="0equ.in"
 
 for step in `cat step.list`
@@ -13,7 +13,7 @@ do
 
 	mdin=${i}equ.in
 	mdout=${i}equ.out
-	prmtop=/home/german/lbp/top_files/1ael.prmtop
+	prmtop=/home/pbarletta/lbp/top_files/1ael.prmtop
 	inpcrd=${k}e1ael.rst7
 	restrt=${i}e1ael.rst7
 	mdcrd=${i}e1ael.nc

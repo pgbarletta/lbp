@@ -1,4 +1,4 @@
-parm /home/german/lbp/top_files/1ael.prmtop
+parm /home/pbarletta/lbp/top_files/1ael.prmtop
 trajin 1e1ael.nc
 trajin 2e1ael.nc
 trajin 3e1ael.nc
