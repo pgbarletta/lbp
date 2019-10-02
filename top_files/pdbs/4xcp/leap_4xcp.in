@@ -1,5 +1,5 @@
-source leaprc.protein.ff14SB
-source leaprc.water.tip3p
+source leaprc.protein.ff19SB
+source leaprc.water.opc
 source leaprc.gaff
 
 # Load ligand  parameters
@@ -11,7 +11,7 @@ saveamberparm cpx dry_4xcp.prmtop dry_4xcp.rst7
 charge cpx
 addions2 cpx Cl- 0
 addions2 cpx Na+ 0
-solvateoct cpx TIP3PBOX 10
+solvateoct cpx OPCBOX 10
 saveamberparm cpx 4xcp.prmtop 4xcp.rst7
 
 quit
